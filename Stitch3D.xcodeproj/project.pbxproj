@@ -13,6 +13,8 @@
 		C01ACBEF231AA28900B382CA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C01ACBED231AA28900B382CA /* Main.storyboard */; };
 		C01ACBF1231AA28D00B382CA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C01ACBF0231AA28D00B382CA /* Assets.xcassets */; };
 		C01ACBF4231AA28D00B382CA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C01ACBF2231AA28D00B382CA /* LaunchScreen.storyboard */; };
+		C01ACC01231AACCA00B382CA /* StateButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = C01ACC00231AACCA00B382CA /* StateButton.swift */; };
+		C01ACC03231B20D200B382CA /* ServoPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = C01ACC02231B20D200B382CA /* ServoPicker.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,8 @@
 		C01ACBF0231AA28D00B382CA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C01ACBF3231AA28D00B382CA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C01ACBF5231AA28D00B382CA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C01ACC00231AACCA00B382CA /* StateButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StateButton.swift; sourceTree = "<group>"; };
+		C01ACC02231B20D200B382CA /* ServoPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServoPicker.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,15 +60,49 @@
 		C01ACBE6231AA28900B382CA /* Stitch3D */ = {
 			isa = PBXGroup;
 			children = (
-				C01ACBE7231AA28900B382CA /* AppDelegate.swift */,
-				C01ACBE9231AA28900B382CA /* SceneDelegate.swift */,
-				C01ACBEB231AA28900B382CA /* ViewController.swift */,
+				C01ACBFE231AA45100B382CA /* Base */,
+				C01ACBFC231AA31400B382CA /* SubClasses */,
+				C01ACBFD231AA43800B382CA /* Controller */,
+				C01ACBFF231AA4B200B382CA /* Canvas */,
 				C01ACBED231AA28900B382CA /* Main.storyboard */,
-				C01ACBF0231AA28D00B382CA /* Assets.xcassets */,
+				C01ACBE9231AA28900B382CA /* SceneDelegate.swift */,
 				C01ACBF2231AA28D00B382CA /* LaunchScreen.storyboard */,
+				C01ACBE7231AA28900B382CA /* AppDelegate.swift */,
+				C01ACBF0231AA28D00B382CA /* Assets.xcassets */,
 				C01ACBF5231AA28D00B382CA /* Info.plist */,
 			);
 			path = Stitch3D;
+			sourceTree = "<group>";
+		};
+		C01ACBFC231AA31400B382CA /* SubClasses */ = {
+			isa = PBXGroup;
+			children = (
+				C01ACC00231AACCA00B382CA /* StateButton.swift */,
+				C01ACC02231B20D200B382CA /* ServoPicker.swift */,
+			);
+			path = SubClasses;
+			sourceTree = "<group>";
+		};
+		C01ACBFD231AA43800B382CA /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				C01ACBEB231AA28900B382CA /* ViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		C01ACBFE231AA45100B382CA /* Base */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		C01ACBFF231AA4B200B382CA /* Canvas */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Canvas;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -139,6 +177,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				C01ACBEC231AA28900B382CA /* ViewController.swift in Sources */,
+				C01ACC01231AACCA00B382CA /* StateButton.swift in Sources */,
+				C01ACC03231B20D200B382CA /* ServoPicker.swift in Sources */,
 				C01ACBE8231AA28900B382CA /* AppDelegate.swift in Sources */,
 				C01ACBEA231AA28900B382CA /* SceneDelegate.swift in Sources */,
 			);
