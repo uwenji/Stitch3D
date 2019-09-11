@@ -78,7 +78,7 @@ class PositionPicker: UIPickerView, UIPickerViewDelegate, UIPickerViewDataSource
         view.transform = CGAffineTransform(rotationAngle: .pi * 0.5)
         
         gradient.frame = view.bounds
-        gradient.colors = [UIColor.systemGray5.cgColor, UIColor.systemBackground.cgColor]
+        gradient.colors = [UIColor.systemBlue.cgColor, UIColor.systemBlue.cgColor]
         view.layer.insertSublayer(gradient, at: 0)
         return view
     }

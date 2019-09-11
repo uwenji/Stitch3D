@@ -79,7 +79,7 @@ class ViewController: UIViewController {
         let picker = PositionPicker()
         picker.translatesAutoresizingMaskIntoConstraints = false
         picker.tintColor = UIColor.systemBackground
-        picker.backgroundColor = UIColor.systemGray6
+        picker.backgroundColor = UIColor.systemBlue
         
         picker.transform = CGAffineTransform(rotationAngle: -.pi * 0.5)
         picker.frame = CGRect(x: 100, y: 200, width: 40, height: 40)
