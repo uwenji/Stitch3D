@@ -16,11 +16,12 @@ class StateButton: UIButton {
     required init(color: UIColor) {
         self.defaultColor = color
         super.init(frame: .zero)
-        addTarget(self, action: #selector(StateButton.buttonPressed), for: .touchUpInside)
         layer.borderWidth = 2.0
         layer.borderColor = color.cgColor
         backgroundColor = .clear
         tintColor = color
+        setTitleColor(color, for: .normal)
+        addTarget(self, action: #selector(StateButton.buttonPressed), for: .touchUpInside)
     }
     
     required init?(coder aDecoder: NSCoder) {
@@ -35,7 +36,7 @@ class StateButton: UIButton {
             isON = true
         }
         let color = isON ? defaultColor : .clear
-        let titleColor = isON ? .systemBackground: defaultColor
+        let titleColor = isON ? .systemBackground : defaultColor
         backgroundColor = color
         setTitleColor(titleColor, for: .normal)
     }

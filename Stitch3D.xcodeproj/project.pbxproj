@@ -9,25 +9,27 @@
 /* Begin PBXBuildFile section */
 		C01ACBE8231AA28900B382CA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C01ACBE7231AA28900B382CA /* AppDelegate.swift */; };
 		C01ACBEA231AA28900B382CA /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C01ACBE9231AA28900B382CA /* SceneDelegate.swift */; };
-		C01ACBEC231AA28900B382CA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C01ACBEB231AA28900B382CA /* ViewController.swift */; };
-		C01ACBEF231AA28900B382CA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C01ACBED231AA28900B382CA /* Main.storyboard */; };
+		C01ACBEC231AA28900B382CA /* JoystickController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C01ACBEB231AA28900B382CA /* JoystickController.swift */; };
 		C01ACBF1231AA28D00B382CA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C01ACBF0231AA28D00B382CA /* Assets.xcassets */; };
 		C01ACBF4231AA28D00B382CA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C01ACBF2231AA28D00B382CA /* LaunchScreen.storyboard */; };
 		C01ACC01231AACCA00B382CA /* StateButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = C01ACC00231AACCA00B382CA /* StateButton.swift */; };
 		C01ACC03231B20D200B382CA /* ServoPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = C01ACC02231B20D200B382CA /* ServoPicker.swift */; };
+		C0562649232A820700CDDFB9 /* FolderController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0562648232A820700CDDFB9 /* FolderController.swift */; };
+		C0562676232BBC7F00CDDFB9 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0562675232BBC7F00CDDFB9 /* TabBarController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		C01ACBE4231AA28900B382CA /* Stitch3D.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Stitch3D.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C01ACBE7231AA28900B382CA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C01ACBE9231AA28900B382CA /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		C01ACBEB231AA28900B382CA /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		C01ACBEE231AA28900B382CA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		C01ACBEB231AA28900B382CA /* JoystickController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JoystickController.swift; sourceTree = "<group>"; };
 		C01ACBF0231AA28D00B382CA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C01ACBF3231AA28D00B382CA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C01ACBF5231AA28D00B382CA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C01ACC00231AACCA00B382CA /* StateButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StateButton.swift; sourceTree = "<group>"; };
 		C01ACC02231B20D200B382CA /* ServoPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServoPicker.swift; sourceTree = "<group>"; };
+		C0562648232A820700CDDFB9 /* FolderController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FolderController.swift; sourceTree = "<group>"; };
+		C0562675232BBC7F00CDDFB9 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,10 +66,9 @@
 				C01ACBFC231AA31400B382CA /* SubClasses */,
 				C01ACBFD231AA43800B382CA /* Controller */,
 				C01ACBFF231AA4B200B382CA /* Canvas */,
-				C01ACBED231AA28900B382CA /* Main.storyboard */,
+				C01ACBE7231AA28900B382CA /* AppDelegate.swift */,
 				C01ACBE9231AA28900B382CA /* SceneDelegate.swift */,
 				C01ACBF2231AA28D00B382CA /* LaunchScreen.storyboard */,
-				C01ACBE7231AA28900B382CA /* AppDelegate.swift */,
 				C01ACBF0231AA28D00B382CA /* Assets.xcassets */,
 				C01ACBF5231AA28D00B382CA /* Info.plist */,
 			);
@@ -86,7 +87,9 @@
 		C01ACBFD231AA43800B382CA /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				C01ACBEB231AA28900B382CA /* ViewController.swift */,
+				C01ACBEB231AA28900B382CA /* JoystickController.swift */,
+				C0562648232A820700CDDFB9 /* FolderController.swift */,
+				C0562675232BBC7F00CDDFB9 /* TabBarController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -165,7 +168,6 @@
 			files = (
 				C01ACBF4231AA28D00B382CA /* LaunchScreen.storyboard in Resources */,
 				C01ACBF1231AA28D00B382CA /* Assets.xcassets in Resources */,
-				C01ACBEF231AA28900B382CA /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -176,25 +178,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C01ACBEC231AA28900B382CA /* ViewController.swift in Sources */,
+				C01ACBEC231AA28900B382CA /* JoystickController.swift in Sources */,
 				C01ACC01231AACCA00B382CA /* StateButton.swift in Sources */,
 				C01ACC03231B20D200B382CA /* ServoPicker.swift in Sources */,
 				C01ACBE8231AA28900B382CA /* AppDelegate.swift in Sources */,
+				C0562676232BBC7F00CDDFB9 /* TabBarController.swift in Sources */,
 				C01ACBEA231AA28900B382CA /* SceneDelegate.swift in Sources */,
+				C0562649232A820700CDDFB9 /* FolderController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		C01ACBED231AA28900B382CA /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				C01ACBEE231AA28900B382CA /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		C01ACBF2231AA28D00B382CA /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (

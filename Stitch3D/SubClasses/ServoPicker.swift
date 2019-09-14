@@ -34,7 +34,7 @@ class VelocityPicker: UIPickerView, UIPickerViewDelegate, UIPickerViewDataSource
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
         return velocities[row]
     }
-    
+
     override init(frame: CGRect) {
         super.init(frame:frame)
         self.translatesAutoresizingMaskIntoConstraints = false
@@ -78,7 +78,7 @@ class PositionPicker: UIPickerView, UIPickerViewDelegate, UIPickerViewDataSource
         view.transform = CGAffineTransform(rotationAngle: .pi * 0.5)
         
         gradient.frame = view.bounds
-        gradient.colors = [UIColor.systemBlue.cgColor, UIColor.systemBlue.cgColor]
+//        gradient.colors = [UIColor.systemBlue.cgColor, UIColor.systemBlue.cgColor]
         view.layer.insertSublayer(gradient, at: 0)
         return view
     }
@@ -86,7 +86,7 @@ class PositionPicker: UIPickerView, UIPickerViewDelegate, UIPickerViewDataSource
     override init(frame: CGRect) {
         super.init(frame:frame)
         self.translatesAutoresizingMaskIntoConstraints = false
-        self.layer.masksToBounds = true
+        self.layer.masksToBounds = false
         self.velocities = numbers.map { String($0 * 10) }
     }
     
