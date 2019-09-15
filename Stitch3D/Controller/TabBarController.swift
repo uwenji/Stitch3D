@@ -23,7 +23,7 @@ class TabBarController:UITabBarController {
             recentFolderNavController,
             creatNavWithTitle(title:"Compose", imageName: "bar_Edit", viewController: UIViewController()),
             creatNavWithTitle(title:"Joystick", imageName: "bar_Joystick", viewController: JoystickController()),
-            creatNavWithTitle(title:"ARDraw", imageName: "bar_AR", viewController: UIViewController())
+            creatNavWithTitle(title:"ARDraw", imageName: "bar_AR", viewController: ARDrawingController())
             
         ]
     }

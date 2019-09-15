@@ -16,6 +16,12 @@
 		C01ACC03231B20D200B382CA /* ServoPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = C01ACC02231B20D200B382CA /* ServoPicker.swift */; };
 		C0562649232A820700CDDFB9 /* FolderController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0562648232A820700CDDFB9 /* FolderController.swift */; };
 		C0562676232BBC7F00CDDFB9 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0562675232BBC7F00CDDFB9 /* TabBarController.swift */; };
+		C091663F232D08D700DFE77B /* ARDrawingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C091663E232D08D700DFE77B /* ARDrawingController.swift */; };
+		C0BAC843232E553E00DD4B66 /* ARC+ARSCNViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0BAC842232E553E00DD4B66 /* ARC+ARSCNViewDelegate.swift */; };
+		C0BAC845232E55DB00DD4B66 /* ARC+Drawing.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0BAC844232E55DB00DD4B66 /* ARC+Drawing.swift */; };
+		C0BAC847232E575700DD4B66 /* SCNGeomtry_Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0BAC846232E575700DD4B66 /* SCNGeomtry_Extensions.swift */; };
+		C0BAC84A232E57B900DD4B66 /* SCNLineNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0BAC849232E57B900DD4B66 /* SCNLineNode.swift */; };
+		C0BAC84C232E57FE00DD4B66 /* SCNVector3_Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0BAC84B232E57FE00DD4B66 /* SCNVector3_Extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +36,13 @@
 		C01ACC02231B20D200B382CA /* ServoPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServoPicker.swift; sourceTree = "<group>"; };
 		C0562648232A820700CDDFB9 /* FolderController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FolderController.swift; sourceTree = "<group>"; };
 		C0562675232BBC7F00CDDFB9 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
+		C091663E232D08D700DFE77B /* ARDrawingController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARDrawingController.swift; sourceTree = "<group>"; };
+		C0BAC842232E553E00DD4B66 /* ARC+ARSCNViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ARC+ARSCNViewDelegate.swift"; sourceTree = "<group>"; };
+		C0BAC844232E55DB00DD4B66 /* ARC+Drawing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ARC+Drawing.swift"; sourceTree = "<group>"; };
+		C0BAC846232E575700DD4B66 /* SCNGeomtry_Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SCNGeomtry_Extensions.swift; sourceTree = "<group>"; };
+		C0BAC848232E579900DD4B66 /* SCNLine.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SCNLine.h; sourceTree = "<group>"; };
+		C0BAC849232E57B900DD4B66 /* SCNLineNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SCNLineNode.swift; sourceTree = "<group>"; };
+		C0BAC84B232E57FE00DD4B66 /* SCNVector3_Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SCNVector3_Extensions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,6 +103,9 @@
 				C01ACBEB231AA28900B382CA /* JoystickController.swift */,
 				C0562648232A820700CDDFB9 /* FolderController.swift */,
 				C0562675232BBC7F00CDDFB9 /* TabBarController.swift */,
+				C091663E232D08D700DFE77B /* ARDrawingController.swift */,
+				C0BAC842232E553E00DD4B66 /* ARC+ARSCNViewDelegate.swift */,
+				C0BAC844232E55DB00DD4B66 /* ARC+Drawing.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -97,6 +113,10 @@
 		C01ACBFE231AA45100B382CA /* Base */ = {
 			isa = PBXGroup;
 			children = (
+				C0BAC846232E575700DD4B66 /* SCNGeomtry_Extensions.swift */,
+				C0BAC848232E579900DD4B66 /* SCNLine.h */,
+				C0BAC849232E57B900DD4B66 /* SCNLineNode.swift */,
+				C0BAC84B232E57FE00DD4B66 /* SCNVector3_Extensions.swift */,
 			);
 			path = Base;
 			sourceTree = "<group>";
@@ -180,11 +200,17 @@
 			files = (
 				C01ACBEC231AA28900B382CA /* JoystickController.swift in Sources */,
 				C01ACC01231AACCA00B382CA /* StateButton.swift in Sources */,
+				C0BAC84A232E57B900DD4B66 /* SCNLineNode.swift in Sources */,
 				C01ACC03231B20D200B382CA /* ServoPicker.swift in Sources */,
+				C0BAC84C232E57FE00DD4B66 /* SCNVector3_Extensions.swift in Sources */,
 				C01ACBE8231AA28900B382CA /* AppDelegate.swift in Sources */,
+				C0BAC843232E553E00DD4B66 /* ARC+ARSCNViewDelegate.swift in Sources */,
+				C0BAC847232E575700DD4B66 /* SCNGeomtry_Extensions.swift in Sources */,
 				C0562676232BBC7F00CDDFB9 /* TabBarController.swift in Sources */,
 				C01ACBEA231AA28900B382CA /* SceneDelegate.swift in Sources */,
 				C0562649232A820700CDDFB9 /* FolderController.swift in Sources */,
+				C091663F232D08D700DFE77B /* ARDrawingController.swift in Sources */,
+				C0BAC845232E55DB00DD4B66 /* ARC+Drawing.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
