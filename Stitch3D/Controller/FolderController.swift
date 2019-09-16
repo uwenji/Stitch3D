@@ -16,18 +16,15 @@ class FolderController:UICollectionViewController, UICollectionViewDelegateFlowL
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        view.backgroundColor = Colors.S293345
+        navigationController?.setNavigationBarHidden(true, animated: true)
         //spacing
         let layout: UICollectionViewFlowLayout = UICollectionViewFlowLayout()
-        layout.sectionInset = UIEdgeInsets(top: 20, left: 0, bottom: 10, right: 0)
+        layout.sectionInset = UIEdgeInsets(top: 20, left: 10, bottom: 10, right: 10)
         layout.minimumInteritemSpacing = 20
         layout.minimumLineSpacing = 20
-        
-        navigationItem.title = "Library"
-        navigationController?.navigationBar.barTintColor = UIColor.systemBackground
-        
         collectionView!.collectionViewLayout = layout
-        collectionView?.backgroundColor = UIColor.systemBackground
+        collectionView?.backgroundColor = Colors.S293345
         collectionView?.alwaysBounceVertical = true
         collectionView?.register(FolderCell.self, forCellWithReuseIdentifier: cellId)
     }
@@ -53,24 +50,11 @@ class FolderCell: BaseCell {
         return imageView
     }()
     
-    let dividerShadow: UIView = {
-        let view = UIView()
-        view.layer.shadowOffset = CGSize(width: 2, height: 2)
-        view.layer.shadowColor = UIColor.systemBlue.cgColor
-        view.layer.cornerRadius = view.frame.width * 0.2
-        return view
-    }()
+    
     override func setupViews() {
-        backgroundColor = UIColor.init(red: 16/255, green: 24/255, blue: 48/255, alpha: 0.4)
+        backgroundColor = Colors.S984061
         layer.cornerRadius = self.frame.width * 0.5
-        addSubview(dividerShadow)
         
-        dividerShadow.translatesAutoresizingMaskIntoConstraints = false
-//        addSubview(patternImageView)
-//        patternImageView.image = UIImage(named: <#T##String#>)
-//        patternImageView.translatesAutoresizingMaskIntoConstraints = false
-//        addConstraints(<#T##constraints: [NSLayoutConstraint]##[NSLayoutConstraint]#>)
-//        addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "H:|[v0]|", options: <#T##NSLayoutConstraint.FormatOptions#>, metrics: <#T##[String : Any]?#>, views: <#T##[String : Any]#>))
     }
 }
 

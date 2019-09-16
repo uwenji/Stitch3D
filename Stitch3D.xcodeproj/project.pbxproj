@@ -22,6 +22,7 @@
 		C0BAC847232E575700DD4B66 /* SCNGeomtry_Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0BAC846232E575700DD4B66 /* SCNGeomtry_Extensions.swift */; };
 		C0BAC84A232E57B900DD4B66 /* SCNLineNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0BAC849232E57B900DD4B66 /* SCNLineNode.swift */; };
 		C0BAC84C232E57FE00DD4B66 /* SCNVector3_Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0BAC84B232E57FE00DD4B66 /* SCNVector3_Extensions.swift */; };
+		C0BAC86E232EFCC000DD4B66 /* CustomColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0BAC86D232EFCC000DD4B66 /* CustomColor.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -43,6 +44,7 @@
 		C0BAC848232E579900DD4B66 /* SCNLine.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SCNLine.h; sourceTree = "<group>"; };
 		C0BAC849232E57B900DD4B66 /* SCNLineNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SCNLineNode.swift; sourceTree = "<group>"; };
 		C0BAC84B232E57FE00DD4B66 /* SCNVector3_Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SCNVector3_Extensions.swift; sourceTree = "<group>"; };
+		C0BAC86D232EFCC000DD4B66 /* CustomColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomColor.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,8 +106,6 @@
 				C0562648232A820700CDDFB9 /* FolderController.swift */,
 				C0562675232BBC7F00CDDFB9 /* TabBarController.swift */,
 				C091663E232D08D700DFE77B /* ARDrawingController.swift */,
-				C0BAC842232E553E00DD4B66 /* ARC+ARSCNViewDelegate.swift */,
-				C0BAC844232E55DB00DD4B66 /* ARC+Drawing.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -117,6 +117,7 @@
 				C0BAC848232E579900DD4B66 /* SCNLine.h */,
 				C0BAC849232E57B900DD4B66 /* SCNLineNode.swift */,
 				C0BAC84B232E57FE00DD4B66 /* SCNVector3_Extensions.swift */,
+				C0BAC86D232EFCC000DD4B66 /* CustomColor.swift */,
 			);
 			path = Base;
 			sourceTree = "<group>";
@@ -124,6 +125,8 @@
 		C01ACBFF231AA4B200B382CA /* Canvas */ = {
 			isa = PBXGroup;
 			children = (
+				C0BAC842232E553E00DD4B66 /* ARC+ARSCNViewDelegate.swift */,
+				C0BAC844232E55DB00DD4B66 /* ARC+Drawing.swift */,
 			);
 			path = Canvas;
 			sourceTree = "<group>";
@@ -206,6 +209,7 @@
 				C01ACBE8231AA28900B382CA /* AppDelegate.swift in Sources */,
 				C0BAC843232E553E00DD4B66 /* ARC+ARSCNViewDelegate.swift in Sources */,
 				C0BAC847232E575700DD4B66 /* SCNGeomtry_Extensions.swift in Sources */,
+				C0BAC86E232EFCC000DD4B66 /* CustomColor.swift in Sources */,
 				C0562676232BBC7F00CDDFB9 /* TabBarController.swift in Sources */,
 				C01ACBEA231AA28900B382CA /* SceneDelegate.swift in Sources */,
 				C0562649232A820700CDDFB9 /* FolderController.swift in Sources */,

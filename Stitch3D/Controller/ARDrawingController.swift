@@ -26,6 +26,7 @@ class ARDrawingController:UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        navigationController?.setNavigationBarHidden(true, animated: true)
 
         self.sceneView.frame = self.view.bounds
         self.sceneView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
@@ -39,7 +40,8 @@ class ARDrawingController:UIViewController {
 
         sceneView.autoenablesDefaultLighting = true
 
-        self.cameraFrameNode.isHidden = true
+        self.cameraFrameNode.isHidden = true // true
+        //self.sceneView.showsStatistics = true
         self.sceneView.pointOfView?.addChildNode(self.cameraFrameNode)
         cameraFrameNode.position.z = -0.5
         cameraFrameNode.eulerAngles.x = -.pi / 2

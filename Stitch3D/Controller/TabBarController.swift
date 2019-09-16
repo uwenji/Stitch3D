@@ -13,16 +13,16 @@ class TabBarController:UITabBarController {
     override func viewDidLoad() {
         super.viewDidLoad()
         //setup view controllers
+        
         let layout = UICollectionViewFlowLayout()
-        let folderController = FolderController(collectionViewLayout: layout)
-        let recentFolderNavController = UINavigationController(rootViewController: folderController)
-        recentFolderNavController.tabBarItem.title = "Library"
-        recentFolderNavController.tabBarItem.image = UIImage(named: "bar_Folder")
+        let joysStickontroller = JoystickController()
+        let recentFolderNavController = UINavigationController(rootViewController: joysStickontroller)
+        recentFolderNavController.tabBarItem.title = "Joystick"
+        recentFolderNavController.tabBarItem.image = UIImage(named: "bar_Joysitck")
         
         viewControllers = [
-            recentFolderNavController,
-            creatNavWithTitle(title:"Compose", imageName: "bar_Edit", viewController: UIViewController()),
             creatNavWithTitle(title:"Joystick", imageName: "bar_Joystick", viewController: JoystickController()),
+            creatNavWithTitle(title:"Library", imageName: "bar_Folder", viewController: FolderController(collectionViewLayout: layout)),
             creatNavWithTitle(title:"ARDraw", imageName: "bar_AR", viewController: ARDrawingController())
             
         ]

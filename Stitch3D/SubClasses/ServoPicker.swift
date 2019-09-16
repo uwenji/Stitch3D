@@ -50,7 +50,7 @@ class VelocityPicker: UIPickerView, UIPickerViewDelegate, UIPickerViewDataSource
 
 
 class PositionPicker: UIPickerView, UIPickerViewDelegate, UIPickerViewDataSource {
-    
+    public var isON = true
     var numbers = [Int](0...102)
     var velocities = [String]()
     
@@ -66,12 +66,16 @@ class PositionPicker: UIPickerView, UIPickerViewDelegate, UIPickerViewDataSource
         return velocities[row]
     }
     
+    func pickerView(_ pickerView: UIPickerView, rowHeightForComponent component: Int) -> CGFloat {
+        return 70
+    }
+    
     func pickerView(_ pickerView: UIPickerView, viewForRow row: Int, forComponent component: Int, reusing view: UIView?) -> UIView {
-        let label = UILabel(frame: CGRect(x: 0, y: 0, width: 30, height: 30))
+        let label = UILabel(frame: CGRect(x: 0, y: 0, width: 40, height: 40))
         label.text = velocities[row]
         label.adjustsFontSizeToFitWidth = true
         label.textAlignment = .center
-        let view = UIView(frame:  CGRect(x: 0, y: 0, width: 30, height: 30))
+        let view = UIView(frame:  CGRect(x: 0, y: 0, width: 40, height: 40))
         let gradient = CAGradientLayer()
         view.addSubview(label)
         
