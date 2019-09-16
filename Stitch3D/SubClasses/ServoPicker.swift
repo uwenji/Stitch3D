@@ -10,7 +10,7 @@ import Foundation
 import UIKit
 
 class VelocityPicker: UIPickerView, UIPickerViewDelegate, UIPickerViewDataSource {
-    
+    public var selectNumber: Int = 0
     var numbers = [Int](0...34)
     var velocities = [String]()
     func modifyNumber(){
@@ -24,7 +24,7 @@ class VelocityPicker: UIPickerView, UIPickerViewDelegate, UIPickerViewDataSource
     }
     
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
-        return 1
+        return 2
     }
     
     func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {

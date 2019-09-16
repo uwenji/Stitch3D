@@ -12,7 +12,7 @@ import Foundation
 let buttonX = 100
 let buttonWidth:CGFloat = 60
 let needleWidth:CGFloat = 200
-let velocityPikerWidth = 80
+let velocityPikerWidth = 200
 
 class JoystickController: UIViewController {
     
@@ -39,28 +39,19 @@ class JoystickController: UIViewController {
         return button
     }()
     
-    let leftPicker: VelocityPicker = {
+    var rightValue:Int = 0
+    var leftValue:Int = 0
+    let wheelPicker: VelocityPicker = {
         let picker = VelocityPicker()
         picker.translatesAutoresizingMaskIntoConstraints = false
         picker.tintColor = UIColor.black
-        picker.frame = CGRect(x: 100, y: 100, width: 20, height: 200)
+        picker.frame = CGRect(x: 100, y: 100, width: 100, height: 200)
         picker.widthAnchor.constraint(equalToConstant: CGFloat(velocityPikerWidth)).isActive = true
         picker.delegate = picker.self
         picker.dataSource = picker.self
         return picker
     }()
-    
-    let rightPicker: VelocityPicker = {
-        let picker = VelocityPicker()
-        picker.translatesAutoresizingMaskIntoConstraints = false
-        picker.tintColor = UIColor.black
-        picker.frame = CGRect(x: 100, y: 200, width: 20, height: 200)
-        picker.widthAnchor.constraint(equalToConstant: CGFloat(velocityPikerWidth)).isActive = true
-        picker.delegate = picker.self
-        picker.dataSource = picker.self
-        return picker
-    }()
-    
+    var needlePosition: Int = 0
     let needlePicker: PositionPicker = {
         let picker = PositionPicker(frame:CGRect(x: 0, y: 0, width: 100, height: 210))
         picker.translatesAutoresizingMaskIntoConstraints = false
@@ -101,19 +92,24 @@ class JoystickController: UIViewController {
         needlePicker.centerXAnchor.constraint(equalTo: needleView.centerXAnchor, constant: -35).isActive = true
         needlePicker.centerYAnchor.constraint(equalTo: needleView.centerYAnchor).isActive = true
         
-        wheelView.addSubview(leftPicker)
-        wheelView.addSubview(rightPicker)
-        leftPicker.leadingAnchor.constraint(equalTo: wheelView.leadingAnchor).isActive = true
-        rightPicker.trailingAnchor.constraint(equalTo: wheelView.trailingAnchor).isActive = true
+        wheelView.addSubview(wheelPicker)
+        wheelPicker.leadingAnchor.constraint(equalTo: wheelView.leadingAnchor).isActive = true
+
         //animation to set number
         needlePicker.selectRow(91, inComponent: 0, animated: true)
-        leftPicker.selectRow(17, inComponent: 0, animated: true)
-        rightPicker.selectRow(17, inComponent: 0, animated: true)
+        wheelPicker.selectRow(17, inComponent: 0, animated: true)
+        wheelPicker.selectRow(17, inComponent: 1, animated: true)
+        //pass the value
+        wheelPicker.delegate = self
+        wheelPicker.dataSource = self
         
         //graphic
-        let circle = UIBezierPath(arcCenter: CGPoint(x: 100, y: 100), radius: 20, startAngle: 0, endAngle: CGFloat(Double.pi * 2), clockwise: false)
-        let shapeLayer = CAShapeLayer(Colors.S41436A)
-        shapeLayer.fillColor = 
+        let circle = UIBezierPath(arcCenter: CGPoint(x: 145, y: 108), radius: CGFloat(Double(abs(rightValue - leftValue)) * 0.2), startAngle: 0, endAngle: CGFloat(Double.pi * 2), clockwise: false)
+        let shapeLayer = CAShapeLayer()
+        shapeLayer.path = circle.cgPath
+        shapeLayer.fillColor = Colors.S465461.cgColor
+        
+        wheelView.layer.addSublayer(shapeLayer)
     }
 }
 
