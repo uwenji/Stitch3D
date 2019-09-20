@@ -217,6 +217,7 @@ void loop()
   // [0]: needle position
   int32_t needleMoving = 0;
   int32_t hookMoving = 0;
+  Serial.println("STATE_____[" + String(State) +"]");
   switch(State){
     //================NEEDLE/HOOK MOVING TEST================
     //case 1: case 3: case 5: case 7: case 9: case 11: case 15:
@@ -241,7 +242,12 @@ void loop()
 
     case 2:{
       dxl_wb.goalPosition(Hook_ID, preHook);
-      State += 1;
+      send("Update?");
+      if(controls[3] == 1){
+        State += 1;
+      } else {
+        State += 16;
+      }
     }break;
     
     case 4:{
