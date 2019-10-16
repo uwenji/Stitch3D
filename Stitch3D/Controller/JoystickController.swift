@@ -14,8 +14,31 @@ let buttonWidth:CGFloat = 60
 let needleWidth:CGFloat = 200
 let velocityPikerWidth = 200
 
+struct Stitchbot: Decodable {
+    var id: Int
+    var rightVelocity: Int
+    var leftVelocity: Int
+    var needlePosition: Int
+    var stitchON: Int
+    public init(id: Int) {
+        self.id = 0;
+        self.rightVelocity = 0
+        self.leftVelocity = 0
+        self.needlePosition = 900
+        self.stitchON = 0
+    }
+    public mutating func update(ID: Int, RightVelocity: Int, LeftVelocity: Int, NeedlePosition: Int, StitchON: Int) {
+        self.id = ID;
+        self.rightVelocity = RightVelocity
+        self.leftVelocity = LeftVelocity
+        self.needlePosition = NeedlePosition
+        self.stitchON = StitchON
+    }
+}
+var bot = Stitchbot(id: 0)
+
 class JoystickController: UIViewController {
-    
+    var isStitchON: Int = 0
     let stitchButton: StateButton = {
         let button = StateButton(color: Colors.JFF893B)
         button.setTitle("stitch", for: .normal)
@@ -25,6 +48,7 @@ class JoystickController: UIViewController {
         button.widthAnchor.constraint(equalToConstant: CGFloat(buttonWidth)).isActive = true
         button.heightAnchor.constraint(equalToConstant: CGFloat(buttonWidth)).isActive = true
         button.addTarget(self, action: #selector(StartStitch), for: .touchUpInside)
+        button.addTarget(self, action: #selector(buttonPut(_:)), for: .touchUpInside)
         return button
     }()
 
@@ -56,7 +80,7 @@ class JoystickController: UIViewController {
         let picker = PositionPicker(frame:CGRect(x: 0, y: 0, width: 100, height: 210))
         picker.translatesAutoresizingMaskIntoConstraints = false
         picker.tintColor = UIColor.systemBackground
-        picker.backgroundColor = Colors.J729CA2
+//        picker.backgroundColor = Colors.J729CA2
         picker.widthAnchor.constraint(equalToConstant: buttonWidth).isActive = true
         picker.heightAnchor.constraint(equalToConstant: 210).isActive = true
         picker.transform = CGAffineTransform(rotationAngle: -.pi * 0.5)
@@ -69,6 +93,42 @@ class JoystickController: UIViewController {
     @objc fileprivate func StartStitch(_ : UIButton) {
         let generator = UINotificationFeedbackGenerator()
         generator.notificationOccurred(.success)
+    }
+    //http
+    @objc fileprivate func buttonPut(_ sender: Any) {
+        isStitchON = stitchButton.currentState
+        let parameters = [
+            "id": "0",
+            "rightVelocity": String(rightValue),
+            "leftVelocity": String(leftValue),
+            "needlePosition": String(needlePosition),
+            "stitchON": String(isStitchON)
+        ]
+        print("L:" + "\(leftValue)" + ",R:" + "\(rightValue)" + ",N:" + "\(needlePosition)" + ",S:" + "\(isStitchON)")
+        
+        guard let url = URL(string: "http://192.168.10.22/velocity") else{ return}
+        guard let httpBody = try? JSONSerialization.data(withJSONObject: parameters, options: []) else{ return}
+        
+        var request = URLRequest(url: url)
+        request.httpMethod = "PUT"
+        request.addValue("application/json", forHTTPHeaderField: "content-type")
+        //        request.allHTTPHeaderFields = headers
+        request.httpBody = httpBody
+        
+        let session = URLSession.shared
+        session.dataTask(with: request) { (data, response, error) in
+            if let response = response {
+                print(response)
+            }
+            if let data = data {
+                do {
+                    let json = try JSONSerialization.jsonObject(with: data, options: [])
+                    print(json)
+                } catch {
+                    print(error)
+                }
+            }
+        }.resume()
     }
     
     override func viewDidLoad(){

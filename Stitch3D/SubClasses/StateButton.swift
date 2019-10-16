@@ -11,6 +11,7 @@ import UIKit
 
 class StateButton: UIButton {
     var isON = false
+    var currentState = 0
     var defaultColor: UIColor
     
     required init(color: UIColor) {
@@ -31,9 +32,11 @@ class StateButton: UIButton {
     @objc func buttonPressed() {
         if isON {
             isON = false
+            currentState = 0
         }
         else {
             isON = true
+            currentState = 1
         }
         let color = isON ? defaultColor : .clear
         let titleColor = isON ? .systemBackground : defaultColor

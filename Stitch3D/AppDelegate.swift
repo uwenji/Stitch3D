@@ -26,9 +26,5 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         window?.rootViewController = TabBarController()
         return true
     }
-    
-    
-
-
 }
 
